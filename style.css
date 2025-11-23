@@ -1,59 +1,110 @@
+
+/* GLOBAL*/
 body {
-  font-family: Arial, sans-serif;
-  background: #eaeef3;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #5b1991, #b43604);
+  min-height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   padding-top: 50px;
   color: #333;
 }
 
+/*  MAIN CONTAINER */
 .container {
-  width: 350px;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
+  width: 380px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.6s ease-in-out;
 }
 
+h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #2e3a59;
+  letter-spacing: 0.5px;
+}
+
+/*  INPUT  */
 input {
   width: 80%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 10px;
-  border: 1px solid #bbb;
-  border-radius: 6px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #f1f4f8;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
 }
 
+/*  BUTTON  */
 button {
-  margin-top: 12px;
-  padding: 10px 20px;
+  margin-top: 15px;
+  padding: 12px 22px;
   border: none;
-  background: #4a90e2;
+  background: linear-gradient(135deg, #3a7bd5, #3a6073);
   color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 15px;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(58, 123, 213, 0.4);
 }
 
 button:hover {
-  background: #357ab7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(58, 123, 213, 0.6);
 }
 
+/*  WEATHER CARD  */
 .weather-card {
-  margin-top: 25px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  animation: fadeUp 0.5s ease;
+}
+
+.weather-card h2 {
+  margin-bottom: 5px;
+  color: #2c3e50;
 }
 
 .temp {
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a2530;
+  margin: 10px 0;
 }
 
 .condition {
-  font-size: 18px;
+  font-size: 20px;
   text-transform: capitalize;
+  color: #555;
 }
 
+/*  ERROR MESSAGE  */
 .error {
   margin-top: 20px;
-  color: red;
-  font-weight: bold;
+  color: #ff4d4d;
+  font-weight: 600;
+}
+
+/*  ANIMATIONS  */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
