@@ -1,4 +1,4 @@
-const API_KEY = "YOUR_API_KEY_HERE"; // <-- Replace this later
+const API_KEY = "64a53c50f3690cb8ff7425889a26f2a0" ;
 
 const app = Vue.createApp({
   data() {
